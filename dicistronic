@@ -1,5 +1,6 @@
 minimap2 -ax map-ont --secondary=no ../ref_genome/tb927genome_56.fasta test100k.fq >test100k.sam
 samtools view -u test100k.sam | samtools sort -o test100k.bam -
+bamToBed -i test100k.bam
 gff2bed < ../ref_genome/tb927_56_cds.gff > cds.bed
 export PATH="/home/logen/programs/bedops_bin:$PATH"
 bedmap --echo-map-id --echo-ref-row-id   --echo-overlap-size   testsort.bed  cds.bed >test6.out
