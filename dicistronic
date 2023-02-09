@@ -1,4 +1,0 @@
-minimap2 -ax map-ont -t30 --secondary=no ../../ref_genome/tb927genome_56.fasta /media/logen/tb2/CPSF/long_reads/fq/bmk_ctr30_chop.fq > bmk_ctr30.sam 
-samtools view -u -@ 30 bmk_ctr30.sam | samtools sort -@ 30 -o bmk_ctr30.bam - 
-bamToBed -i bmk_ctr30.bam > bmk_ctr30.bed 
-bedmap --echo-ref-row-id --echo-map-id --echo-map-size  --echo-overlap-size   bmk_ctr30.bed  cds.bed > bmk_ctr30.out 
